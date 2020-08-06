@@ -1,2 +1,2 @@
-src/main/resources/application.properties filter=git-crypt diff=git-crypt
-.gitattributes !filter-keysdifgit-crypt status -ef
+#src/main/resources/application.properties filter=git-crypt diff=git-crypt
+#.gitattributes !filter-keysdifgit-crypt status -ef
