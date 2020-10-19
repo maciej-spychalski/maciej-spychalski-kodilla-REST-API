@@ -28,12 +28,20 @@ dependencies {
 	compile('mysql:mysql-connector-java')
 //	compile('org.postgresql:postgresql')
 
+
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-mail')
+
+	// Swagger
 	compile('io.springfox:springfox-swagger2:2.7.0')
 	compile('io.springfox:springfox-swagger-ui:2.7.0')
 
-	compile('org.springframework.boot:spring-boot-starter-mail:1.5.7.RELEASE')
+	// Gson - do transformowania obiektów na JSON'a i odwrotnie
+	compile('com.google.code.gson:gson:2.8.2')
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+
+	// LogCaptor - do testowania wpisów w logach
 	testCompile('io.github.hakky54:logcaptor:2.1.1')
 //	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
