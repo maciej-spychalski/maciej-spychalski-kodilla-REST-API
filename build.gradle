@@ -39,6 +39,9 @@ dependencies {
 	// Gson - do transformowania obiektów na JSON'a i odwrotnie
 	compile('com.google.code.gson:gson:2.8.2')
 
+	// Thymeleaf
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
 	// LogCaptor - do testowania wpisów w logach
