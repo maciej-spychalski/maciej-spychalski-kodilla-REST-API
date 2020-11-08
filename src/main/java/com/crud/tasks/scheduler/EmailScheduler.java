@@ -22,11 +22,11 @@ public class EmailScheduler {
     @Autowired
     private AdminConfig adminConfig;
 
-    @Scheduled(cron = "0 0 10 * * *") // raz dziennie
-//    @Scheduled(fixedDelay = 10_000) // co 10 sekund
+//    @Scheduled(cron = "0 0 10 * * *") // once a day
+    @Scheduled(fixedDelay = 10_000) // once every 10 seconds
     public void sendInformationEmail() {
         long size = taskRepository.count();
-        simpleEmailService.send(new Mail(
+        simpleEmailService.sendDailyMail(new Mail(
                 adminConfig.getAdminMail(),
                 SUBJECT,
                 "Currently in database you got: " + size + (size > 1 ? " tasks" : " task"))
