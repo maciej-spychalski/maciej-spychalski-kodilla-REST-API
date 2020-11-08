@@ -22,8 +22,8 @@ public class EmailScheduler {
     @Autowired
     private AdminConfig adminConfig;
 
-//    @Scheduled(cron = "0 0 10 * * *") // once a day
-    @Scheduled(fixedDelay = 10_000) // once every 10 seconds
+    @Scheduled(cron = "0 0 10 * * *") // once a day
+//    @Scheduled(fixedDelay = 10_000) // once every 10 seconds
     public void sendInformationEmail() {
         long size = taskRepository.count();
         simpleEmailService.sendDailyMail(new Mail(
