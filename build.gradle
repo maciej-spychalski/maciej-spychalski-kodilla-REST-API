@@ -22,14 +22,20 @@ dependencies {
 	annotationProcessor('org.projectlombok:lombok')
 
 	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.projectlombok:lombok')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 
-	compile('mysql:mysql-connector-java')
-//	compile('org.postgresql:postgresql')
+	// lombok -automatyczne adnotacje dodajace gettery, settery, konstruktory itp.
+	compile('org.projectlombok:lombok')
 
+	// baza danych mysql
+//	compile('mysql:mysql-connector-java')
+	// baza danych postgresql - heroku
+	compile('org.postgresql:postgresql')
 
+	// actuator czyli dodatkowe mappingi typu status, health, itp.
 	compile('org.springframework.boot:spring-boot-starter-actuator')
+
+	// wysylanie maili
 	compile('org.springframework.boot:spring-boot-starter-mail')
 
 	// Swagger
@@ -39,13 +45,15 @@ dependencies {
 	// Gson - do transformowania obiektów na JSON'a i odwrotnie
 	compile('com.google.code.gson:gson:2.8.2')
 
-	// Thymeleaf
+	// Thymeleaf - biblioteka wspierajaca tworzenie widokow, szablonow maili itp.
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 
+	// Biblioteka do uruchomienia testow w aplikacji
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
 	// LogCaptor - do testowania wpisów w logach
 	testCompile('io.github.hakky54:logcaptor:2.1.1')
+
 //	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
