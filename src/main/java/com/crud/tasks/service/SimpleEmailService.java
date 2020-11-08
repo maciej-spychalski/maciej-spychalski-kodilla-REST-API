@@ -61,28 +61,5 @@ public class SimpleEmailService {
         };
     }
 
-
-
-
-
-    private SimpleMailMessage createMailMessage(final Mail mail) {
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(mail.getMailTo());
-        mailMessage.setSubject(mail.getSubject());
-        mailMessage.setText(mail.getMessage());
-//        if (mail.getToCc() != null) {
-//            mailMessage.setCc(mail.getToCc());
-//        }
-        return mailMessage;
-    }
-
-    private SimpleMailMessage createSimpleMessage(Mail mail) {
-        SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo(mail.getMailTo());
-        mailMessage.setSubject(mail.getSubject());
-        mailMessage.setText(mailCreatorService.buildTrelloCardEmail(mail.getMessage()));
-        return mailMessage;
-    }
-
 }
 
