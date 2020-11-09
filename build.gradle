@@ -28,9 +28,9 @@ dependencies {
 	compile('org.projectlombok:lombok')
 
 	// baza danych mysql
-//	compile('mysql:mysql-connector-java')
+	compile('mysql:mysql-connector-java')
 	// baza danych postgresql - heroku
-	compile('org.postgresql:postgresql')
+//	compile('org.postgresql:postgresql')
 
 	// actuator czyli dodatkowe mappingi typu status, health, itp.
 	compile('org.springframework.boot:spring-boot-starter-actuator')
